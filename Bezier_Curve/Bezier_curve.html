@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Bézier curve 貝塞爾曲線</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+	</head>
+ 
+	<body>
+	<h1>Bézier curve貝塞爾曲線</h1>
+	
+	<h2>Introduce</h2>
+		<p>
+		The mathematical basis for Bézier curves—the Bernstein polynomials—was established in 1912, but the polynomials were not applied to graphics until some 50 years later when mathematician Paul de Casteljau in 1959 developed de Casteljau's algorithm, a numerically stable method for evaluating the curves, and became the first to apply them to computer-aided design at French automaker Citroën. Yet, de Casteljau's method was patented in France but not published until the 1980s while the Bézier polynomials were widely publicised in the 1960s by the French engineer Pierre Bézier, who discovered them independently and used them to design automobile bodies at Renault.
+		</p>
+		
+	<h2>Bézier curve</h2>
+		<h3>$n$-degree Bézier curve</h3>
+		<p>
+			The $n$-degree Bezier Curve is given by 
+			\[\vec{B}(t)=\sum_{i=0}^{n}C^{n}_{i}\cdot \left(1-t\right)^{n-i}t^{i}\cdot \vec{r}_i,\]
+			where $\vec{r}_j, \quad j=0,1,\ldots,n$ is the position vector of $n+1$ contolling points and $C^{n}_{m}$ is the binomial coefficients 
+			\[C^n_m=\frac{n!}{m!\left(n-m\right)!}\]
+			for $n,m \in \mathbb{N}$ and $n\geq m \geq 0$. 
+		</p>
+		<h3>Example of Bézier curve</h3>
+			<ol>
+			<li>  $9$-degree with $P_i : \vec{r}_i$, $i=1,2,\ldots,10$ denote <br>
+				<br><center>
+				<iframe src="https://www.desmos.com/calculator/9z5xeirzvv?embed" 
+						width="900px" 
+						height="500px" 
+						style="border: 1px solid #ccc"
+						frameborder=0>
+				</iframe>
+				</center>
+			<li>  Record the trace of black point to be $\vec{r}_i$<br>
+				<br><center>
+				<iframe src="https://www.desmos.com/calculator/xeusbe8myr?embed" 
+						width="900px" 
+						height="500px" 
+						style="border: 1px solid #ccc"
+						frameborder=0>
+				</iframe>
+				</center>
+			</ol>
+		
+		
+	<h2>Properties of Bézier curve</h2>
+	<h2>Bézier curve Interpolation</h2>
+	<h2>Bézier curve Spline</h2>
+	
+	
+	
+	</body>
+</html>
